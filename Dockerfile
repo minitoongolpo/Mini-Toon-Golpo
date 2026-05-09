@@ -23,7 +23,7 @@ FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
 
 # Install FFmpeg and FFprobe
-RUN apk add --no-cache     ffmpeg     ffprobe     fontconfig     freetype     libass     ca-certificates     tzdata
+RUN apk add --no-cache ffmpeg fontconfig freetype libass ca-certificates tzdata
 
 # Create app directories
 RUN mkdir -p /tmp/minitoon/temp /tmp/minitoon/output /app/logs
