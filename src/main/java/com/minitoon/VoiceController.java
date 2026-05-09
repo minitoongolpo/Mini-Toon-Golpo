@@ -7,15 +7,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class VoiceController {
 
-    @Value("${ELEVENLABS_API_KEY}")
+    @Value("${ELEVENLABS_API_KEY:NOT_FOUND}")
     private String elevenApiKey;
 
-    @Value("${ELEVENLABS_VOICE_ID}")
+    @Value("${ELEVENLABS_VOICE_ID:NOT_FOUND}")
     private String voiceId;
 
     @GetMapping("/generate-voice")
     public String generateVoice() {
 
-        return "Voice generation ready! Voice ID = " + voiceId;
+        return "Voice Ready | Voice ID = " + voiceId;
     }
 }
